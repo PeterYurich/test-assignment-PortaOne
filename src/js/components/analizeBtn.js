@@ -7,6 +7,8 @@ function analizeText(e) {
     e.preventDefault()
     const textarea = document.querySelector(".textarea")
     const text = textarea.value.trim()
+    
+    if (text === "") { return }
 
     const findUnicCharacter = (charactersArray) => charactersArray.find((character, index, arr) => {
         const otherCharacters = arr.filter((_, ind) => ind !== index)
