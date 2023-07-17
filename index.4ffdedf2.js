@@ -1,2 +1,0 @@
-function t(t){return`\n    <p>Result is: ${t}</p>\n    `}const e=document.getElementById("resultContainer");document.querySelector(".submitBtn").addEventListener("click",(function(n){n.preventDefault();const r=document.querySelector(".textarea").value.trim(),c=t=>t.find(((t,e,n)=>!n.filter(((t,n)=>n!==e)).includes(t))),i=r.split(" ").map((t=>{const e=t.split("");return c(e)})),o=c(i)||"the text doesn't contains a character corresponding the condition";e.innerHTML=t(o)}));
-//# sourceMappingURL=index.4ffdedf2.js.map
