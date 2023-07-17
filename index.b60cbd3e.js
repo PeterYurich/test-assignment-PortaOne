@@ -1,0 +1,2 @@
+!function(){function n(n){return"\n    <p>Result is: ".concat(n,"</p>\n    ")}var t=document.getElementById("resultContainer");document.querySelector(".submitBtn").addEventListener("click",(function(e){e.preventDefault();var r=document.querySelector(".textarea").value.trim(),u=function(n){return n.find((function(n,t,e){return!e.filter((function(n,e){return e!==t})).includes(n)}))},i=r.split(" ").map((function(n){var t=n.split("");return u(t)})),c=u(i);t.innerHTML=n(c)}))}();
+//# sourceMappingURL=index.b60cbd3e.js.map
