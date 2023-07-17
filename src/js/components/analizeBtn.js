@@ -8,7 +8,7 @@ function analizeText(e) {
     const textarea = document.querySelector(".textarea")
     const text = textarea.value.trim()
 
-    const unicCharacter = (charactersArray) => charactersArray.find((character, index, arr) => {
+    const findUnicCharacter = (charactersArray) => charactersArray.find((character, index, arr) => {
         const otherCharacters = arr.filter((_, ind) => ind !== index)
         return !otherCharacters.includes(character)
     })
@@ -17,11 +17,12 @@ function analizeText(e) {
     const unicCharactersFromEachWord = wordsArray.map(word => {
         const wordCharactersArray = word.split("")
 
-        return unicCharacter(wordCharactersArray)
+        return findUnicCharacter(wordCharactersArray)
     })
 
-    const result = unicCharacter(unicCharactersFromEachWord)
-    
+    const result = findUnicCharacter(unicCharactersFromEachWord)
+        || "the text doesn't contains a character corresponding the condition"
+
     container.innerHTML = resultMarkup(result)
 }
 
